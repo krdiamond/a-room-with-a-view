@@ -1,28 +1,33 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+
+     <Desert/> <!--component found in component folder -->
+
+
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+ import Desert from './components/Desert.vue' // to import a component it must be imported here
 
-export default {
-  name: 'app',
-  components: {
-    HelloWorld
+  export default {
+    name: 'app',
+    components: {   //component must be called here in addition to import
+      Desert
+    }
   }
-}
 </script>
 
-<style>
+/* <style>
+
+/* global css that is applied to everything does not have scope */
+/* scoped is used when it is specific to only that component */
+
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
 }
+
 </style>
