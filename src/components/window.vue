@@ -8,7 +8,7 @@
 
 <script>
 
-import windowImageFile from "/Users/user/kristina-coding/a-room-with-a-vue/src/assets/window.png"
+import windowImageFile from "../../src/assets/window.png"
 
 export default {
   name: 'window',
@@ -19,8 +19,3 @@ export default {
   }
 }
 </script>
-
-
-<style src="./window.css">
-
-</style>

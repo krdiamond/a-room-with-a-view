@@ -1,36 +1,47 @@
 <template>
   <div id="app">
 
-    <!--  <Window/> component found in component folder -->
-     <Example/>
+    <select v-model="selectedLocation" >
+      <option v-for="(option,index) in options" :key="index" v-bind:value="option.value">
+        {{ option.text }}
+      </option>
+    </select>
 
+    <div class="container">
+      <Window/> <!-- component found in component folder -->
+      <Pool/>
+    </div>
 
   </div>
 </template>
 
 <script>
- import Window from './components/window.vue' // to import a component it must be imported here
- import Example from './components/example_component.vue'
+ import Window from './components/window.vue'
+ import Pool from './components/pool/pool.vue'
+
 
   export default {
     name: 'app',
     components: {   //component must be called here in addition to import
       Window,
-      Example
+      Pool,
+    },
+    data(){
+      return {
+        selectedLocation: 'CHOOSE A LOCATION',
+        options: [
+          { text: 'pool', value: 'pool' },
+          { text: 'car', value: 'car' },
+        ]
+      }
+    },
+    methods: {
+
     }
   }
 </script>
 
-<style>
+<style src="./app.css">
 
-/* global css that is applied to everything does not have scope */
-/* scoped is used when it is specific to only that component */
-
-#app {5
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 48px;
-}
 
 </style>
