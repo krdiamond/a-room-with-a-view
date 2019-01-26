@@ -11,6 +11,11 @@ If you do not use homebrew [follow these alternative instructions](https://yarnp
 + Start a server so that you can view your work ```yarn run serve```
 + When your server is running it will tell you where to view your work. For me it is: (http://localhost:8080/)
 
+* Item 1
+* Item 2
+  * Item 2a
+  * Item 2b
+  
 <!-- ### Compiles and minifies for production ```yarn run build``` -->
 
 ## Vue.js NOTES
