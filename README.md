@@ -1,4 +1,9 @@
-# a-room-with-a-vue
+# A ROOM WITH A VIEW
+
+## Install YARN on your computer if you do not have it installed already
+```
+brew install yarn
+```
 
 ## Project setup
 ```
