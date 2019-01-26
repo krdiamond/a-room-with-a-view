@@ -1,12 +1,10 @@
 # A ROOM WITH A VIEW
 
-## Install YARN
-if you do not have it installed already
-```
-brew install yarn
-```
-
 ## Project setup
+
+Install YARN On Your Computer ```brew install yarn```
+
+
 ```
 yarn install
 ```
