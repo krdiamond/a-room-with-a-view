@@ -1,0 +1,58 @@
+// -------------------------------- GENERAL -------------------------------- //
+
+body, html {
+  overflow: hidden;
+  margin: 0;
+}
+
+img {
+  max-height: 90vh;
+  max-width: 100%;
+}
+
+#app {
+  position: relative;
+  margin: 0 20%;
+}
+
+#the-vue-container {
+  position: relative;
+  height: 920px;
+  max-width: 1050px;
+  margin: auto;
+}
+
+#window, #pool {
+  position: absolute;
+  margin-top: 4vh;
+}
+
+#window {
+  z-index: 1;
+}
+
+
+/*
+
+.clouds {
+  position: absolute;
+  z-index: 2
+}
+
+#cloud1{
+  left:0px;
+  top: 30px;
+  width: 400px;
+}
+
+#cloud2{
+  left: 290px;
+  top: 200px;
+  width: 300px;
+}
+
+#cloud3{
+  left: 450px;
+  top: 56px;
+  width: 200px;
+} */

@@ -1,7 +1,7 @@
 <template>
-  <div id="pool" class="the_view">
+  <div id="pool">
     <img :src="pool"/>
-    <Clouds/>
+    <!-- <Clouds/> -->
   </div>
 </template>
 

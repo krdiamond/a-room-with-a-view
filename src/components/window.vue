@@ -1,8 +1,6 @@
 <template>
   <div id="window">
-
     <img :src="windowImageFileToUseAsBackground"/>
-
   </div>
 </template>
 
