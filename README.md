@@ -1,20 +1,19 @@
 # A ROOM WITH A VIEW
 
-## Project setup
+## Project setup - Development
 
-Install YARN On Your Computer ```brew install yarn```
++ Fork & Clone Directory
++ Install yarn on your computer: ```brew install yarn```
+If you do not use homebrew [follow these alternative instructions](https://yarnpkg.com/lang/en/docs/install/#mac-stable)
++ Make sure you have the most up to date version of node ( > 8 to use vue ```node -v```) ```brew install nvm && nvm install node ```
++ Install yarn in project directory ```yarn install```
++ Start a server so that you can view your work ```yarn run serve```
 
 
-```
-yarn install
-```
 
-### Compiles and hot-reloads for development
-```
-yarn run serve
-```
 
-### Compiles and minifies for production
+
+<!-- ### Compiles and minifies for production
 ```
 yarn run build
 ```
@@ -22,4 +21,4 @@ yarn run build
 ### Lints and fixes files
 ```
 yarn run lint
-```
+``` -->
