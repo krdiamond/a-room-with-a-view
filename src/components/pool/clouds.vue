@@ -1,8 +1,8 @@
 <template>
   <div id="clouds">
-    <img :src="cloud" v-on:click="handleCloudClick" id="cloud1" class="clouds" alt="cloud"/>
-    <img :src="cloud" v-on:click="handleCloudClick" id="cloud2" class="clouds" alt="cloud"/>
-    <img :src="cloud" v-on:click="handleCloudClick" id="cloud3" class="clouds" alt="cloud"/>
+    <img :src="cloud" v-on:click="handleCloudClick" id="cloud1" class="cloud" alt="cloud"/>
+    <img :src="cloud" v-on:click="handleCloudClick" id="cloud2" class="cloud" alt="cloud"/>
+    <img :src="cloud" v-on:click="handleCloudClick" id="cloud3" class="cloud" alt="cloud"/>
   </div>
 </template>
 

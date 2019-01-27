@@ -31,28 +31,28 @@ img {
   z-index: 1;
 }
 
+.hide {
+  display: none;
+}
 
-/*
 
-.clouds {
+#clouds {
   position: absolute;
-  z-index: 2
+  top: 0;
+  width: 60%;
 }
 
 #cloud1{
-  left:0px;
-  top: 30px;
-  width: 400px;
+  width: 70%;
 }
 
 #cloud2{
-  left: 290px;
-  top: 200px;
-  width: 300px;
+  width: 30%;
 }
 
 #cloud3{
-  left: 450px;
-  top: 56px;
-  width: 200px;
-} */
+  position: relative;
+  width: 50%;
+  right: -150px;
+  top: -40px;
+}

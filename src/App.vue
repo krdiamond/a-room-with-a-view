@@ -8,7 +8,7 @@
 </template>
 
 <script>
- import Window from './components/window.vue'
+ import Window from './components/window/window.vue'
  import Pool from './components/pool/pool.vue'
 
 
