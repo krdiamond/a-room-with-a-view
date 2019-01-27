@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <div id="the-vue-container">
-      <Window/> <!-- component found in component folder -->
+      <Window/>
       <Pool/>
     </div>
   </div>
@@ -16,10 +16,7 @@
     name: 'app',
     components: {   //component must be called here in addition to import
       Window,
-      Pool,
-    },
-    methods: {
-
+      Pool
     }
   }
 </script>

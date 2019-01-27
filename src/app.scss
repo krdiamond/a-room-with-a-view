@@ -28,18 +28,23 @@ img {
 }
 
 #window {
-  z-index: 1;
+  z-index: 2;
 }
 
 .hide {
   display: none;
 }
 
+// .click_through {
+//    pointer-events: none;
+// }
+
 
 #clouds {
   position: absolute;
   top: 0;
   width: 60%;
+  z-index: 1;
 }
 
 #cloud1{

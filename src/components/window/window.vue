@@ -1,5 +1,5 @@
 <template>
-  <div id="window">
+  <div id="window" v-bind:class="{click_through: windowIsOpened }">
 
       <img :src="closedWindowImage"
             v-on:click="windowIsOpened = !windowIsOpened"
@@ -23,7 +23,7 @@ export default {
     return {
       openWindowImage: openWindowFile,
       closedWindowImage: closedWindowFile,
-      windowIsOpened: false,
+      windowIsOpened: true,
     }
   }
 }
