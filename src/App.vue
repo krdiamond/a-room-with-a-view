@@ -16,7 +16,7 @@
     name: 'app',
     components: {   //component must be called here in addition to import
       Window,
-      Pool
+      Pool,
     }
   }
 </script>

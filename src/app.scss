@@ -20,11 +20,14 @@ img {
   height: 920px;
   max-width: 1050px;
   margin: auto;
+  text-align: center;
 }
 
 #window, #pool {
   position: absolute;
   margin-top: 4vh;
+  left: 0;
+  right: 0;
 }
 
 #window {
@@ -40,24 +43,24 @@ img {
 // }
 
 
-#clouds {
-  position: absolute;
-  top: 0;
-  width: 60%;
-  z-index: 1;
-}
-
-#cloud1{
-  width: 70%;
-}
-
-#cloud2{
-  width: 30%;
-}
-
-#cloud3{
-  position: relative;
-  width: 50%;
-  right: -150px;
-  top: -40px;
-}
+// #clouds {
+//   position: absolute;
+//   top: 0;
+//   width: 60%;
+//   z-index: 1;
+// }
+//
+// #cloud1{
+//   width: 70%;
+// }
+//
+// #cloud2{
+//   width: 30%;
+// }
+//
+// #cloud3{
+//   position: relative;
+//   width: 50%;
+//   right: -150px;
+//   top: -40px;
+// }

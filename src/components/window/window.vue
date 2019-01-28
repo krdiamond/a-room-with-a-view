@@ -8,6 +8,7 @@
       <img :src="openWindowImage"
             v-on:click="windowIsOpened = !windowIsOpened"
             v-bind:class="{ hide: !windowIsOpened}"/>
+
   </div>
 </template>
 
