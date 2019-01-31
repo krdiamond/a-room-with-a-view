@@ -1,3 +1,12 @@
+// ----------------------------- BOUND CLASSES ------------------------------ //
+.hide {
+  display: none;
+}
+
+.click_through {
+  pointer-events: none;
+}
+
 // -------------------------------- GENERAL -------------------------------- //
 
 body, html {
@@ -23,19 +32,39 @@ img {
   text-align: center;
 }
 
-#window, #pool {
+#window, #the-view {
   position: absolute;
   margin-top: 4vh;
   left: 0;
   right: 0;
 }
 
+// --------------------------------- WINDOW --------------------------------- //
+
 #window {
   z-index: 2;
 }
 
-.hide {
-  display: none;
+// --------------------------------- CLOUDS --------------------------------- //
+
+#clouds {
+  position: absolute;
+  top: 0px;
+  width: 60%;
+}
+
+#cloud1{
+  width: 70%;
+}
+
+#cloud2{
+  width: 30%;
+}
+
+#cloud3{
+  position: relative;
+  width: 50%;
+  top: -40px;
 }
 
 // .click_through {
@@ -50,17 +79,3 @@ img {
 //   z-index: 1;
 // }
 //
-// #cloud1{
-//   width: 70%;
-// }
-//
-// #cloud2{
-//   width: 30%;
-// }
-//
-// #cloud3{
-//   position: relative;
-//   width: 50%;
-//   right: -150px;
-//   top: -40px;
-// }

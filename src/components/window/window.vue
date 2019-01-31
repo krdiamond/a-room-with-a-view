@@ -1,13 +1,18 @@
 <template>
-  <div id="window" v-bind:class="{click_through: windowIsOpened }">
+  <div id="window">
 
-      <img :src="closedWindowImage"
-            v-on:click="windowIsOpened = !windowIsOpened"
-            v-bind:class="{ hide: windowIsOpened}"/>
+    <img id="closed-window"
+          v-on:click="windowIsOpened = !windowIsOpened"
+          v-bind:class="{ hide: windowIsOpened}"
+          img :src="closedWindowImage">
 
-      <img :src="openWindowImage"
-            v-on:click="windowIsOpened = !windowIsOpened"
-            v-bind:class="{ hide: !windowIsOpened}"/>
+
+    <img id="open-window"
+         v-on:click="windowIsOpened = !windowIsOpened"
+         v-bind:class="{ hide: !windowIsOpened, click_through: windowIsOpened,}"
+         img :src="openWindowImage"/>
+
+
 
   </div>
 </template>
@@ -24,7 +29,15 @@ export default {
     return {
       openWindowImage: openWindowFile,
       closedWindowImage: closedWindowFile,
-      windowIsOpened: true,
+      windowIsOpened: false,
+    }
+  },
+  computed: {
+    classObject: function () {
+      return {
+        active: this.isActive && !this.error,
+        'text-danger': this.error && this.error.type === 'fatal'
+      }
     }
   }
 }
