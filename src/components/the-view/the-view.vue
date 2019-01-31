@@ -1,14 +1,14 @@
 <template>
   <div id="the-view">
 
-    <img :src="poolImage"/>
+    <img id="pool" :src="poolImage"/>
 
-    <div id="clouds"
-         v-on:click="itsRaining = !itsRaining"
-         v-bind:class="{ hide: itsRaining}">
-         <img :src="cloudImage" id="cloud1"/>
-         <img :src="cloudImage" id="cloud2"/>
-         <img :src="cloudImage" id="cloud3"/>
+    <img id="rain" :src="rainImage" v-bind:class="{ hide: itsRaining}"/>
+
+    <div id="clouds" v-on:click="itsRaining = !itsRaining">
+         <img id="cloud1" :src="cloudImage"/>
+         <img id="cloud2" :src="cloudImage"/>
+         <img id="cloud3" :src="cloudImage"/>
     </div>
 
   </div>
@@ -17,6 +17,7 @@
 <script>
 import poolFile from "./images/pool.jpg"
 import cloudFile from "./images/cloud.png"
+import rainFile from "./images/raining.gif"
 
 export default {
   name: 'the-view',
@@ -24,6 +25,7 @@ export default {
     return {
       poolImage: poolFile,
       cloudImage: cloudFile,
+      rainImage: rainFile,
       itsRaining: false,
     }
   }
