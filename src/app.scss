@@ -45,6 +45,28 @@ img {
   z-index: 2;
 }
 
+#window-controller {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  .right {
+    border: 3px solid green;
+    width:23%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    height:100%
+  }
+  .left {
+    border: 3px solid green;
+    width:23%;
+    height:100%;
+  }
+}
+
+
+
 // -------------------------------- THE VIEW -------------------------------- //
 
 #the-view {

@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <div id="the-vue-container">
-      <!-- <Window/> -->
+      <Window/>
       <theView/>
     </div>
   </div>

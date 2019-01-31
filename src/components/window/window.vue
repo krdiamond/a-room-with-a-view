@@ -1,5 +1,5 @@
 <template>
-  <div id="window">
+  <div id="window" v-bind:class="{click_through: windowIsOpened}">
 
     <img id="closed-window"
           v-on:click="windowIsOpened = !windowIsOpened"
@@ -9,8 +9,13 @@
 
     <img id="open-window"
          v-on:click="windowIsOpened = !windowIsOpened"
-         v-bind:class="{ hide: !windowIsOpened, click_through: windowIsOpened,}"
+         v-bind:class="{ hide: !windowIsOpened}"
          img :src="openWindowImage"/>
+
+    <div id="window-controller">
+      <div class="left"></div>
+      <div class="right"></div>
+    </div>
 
 
 
