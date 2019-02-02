@@ -6,17 +6,10 @@
           v-bind:class="{ hide: windowIsOpened}"
           img :src="closedWindowImage">
 
-
     <img id="open-window"
          v-on:click="windowIsOpened = !windowIsOpened"
          v-bind:class="{ hide: !windowIsOpened}"
          img :src="openWindowImage"/>
-
-    <div id="window-controller">
-      <div class="left"></div>
-      <div class="right"></div>
-    </div>
-
 
 
   </div>
@@ -37,12 +30,9 @@ export default {
       windowIsOpened: false,
     }
   },
-  computed: {
-    classObject: function () {
-      return {
-        active: this.isActive && !this.error,
-        'text-danger': this.error && this.error.type === 'fatal'
-      }
+  methods: {
+    itsRainingSoCloseTheWindow() {
+      setTimeout(() => this.windowIsOpened = true, 1000);
     }
   }
 }
