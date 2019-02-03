@@ -18,7 +18,6 @@
 import poolFile from "./images/pool.jpg"
 import cloudFile from "./images/cloud.png"
 import rainFile from "./images/raining.gif"
-import { serverBus } from '/Users/kristina/Programming/a-room-with-a-vue/src/main.js';
 
 export default {
   name: 'the-view',
@@ -29,11 +28,6 @@ export default {
       rainImage: rainFile,
       itsRaining: false,
     }
-  },
-  // methods: {
-  //   closeWindow: function () {
-  //     serverBus.$emit('closeWindow', this.itsRaining);
-  //    }
-  // }
+  }
 }
 </script>

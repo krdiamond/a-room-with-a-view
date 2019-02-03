@@ -1,5 +1,5 @@
 <template>
-  <div id="windows">
+  <div id="window-open-or-closed">
 
     <div id="window" v-bind:class="{click_through: windowIsOpened}">
 
@@ -28,7 +28,6 @@
 
 import closedWindowFile from "./images/window-closed.png"
 import openWindowFile from "./images/window-open.png"
-import { serverBus } from '/Users/kristina/Programming/a-room-with-a-vue/src/main.js';
 
 
 
@@ -41,14 +40,7 @@ export default {
       closedWindowImage: closedWindowFile,
       windowIsOpened: false,
     }
-  },
-  // created() {
-  //   serverBus.$on('closeWindow', (itsRaining) => {
-  //     if (itsRaining == true && this.windowIsOpened == true) {
-  //       setTimeout(() => this.windowIsOpened = false, 1000);
-  //     }
-  //   });
-  // }
+  }
 }
 </script>
 
