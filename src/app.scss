@@ -70,14 +70,22 @@ img {
 
 // --------------------------------- CLOUDS --------------------------------- //
 
+@keyframes windy-clouds {
+  from {left: 0;}
+  to {left: -60%;}
+}
+
 #clouds {
   position: absolute;
   top: 0px;
   width: 60%;
+  padding:12px;
+  animation-name: windy-clouds;
+  animation-duration: 300s;
 }
 
 #cloud1{
-  width: 70%;
+  width: 60%;
 }
 
 #cloud2{
@@ -86,7 +94,8 @@ img {
 
 #cloud3{
   position: relative;
-  width: 55%;
+  width: 50%;
+  left: 10%;
   bottom: 0px;
 }
 
