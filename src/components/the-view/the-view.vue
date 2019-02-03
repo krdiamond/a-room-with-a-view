@@ -13,7 +13,7 @@
          <img id="cloud3" :src="cloudImage" v-on:click="itsRaining = !itsRaining"/>
     </div>
 
-    {{now}}
+    {{counter}}
 
   </div>
 </template>
@@ -23,11 +23,6 @@ import poolFile from "./images/pool.jpg"
 import cloudFile from "./images/cloud.png"
 import rainFile from "./images/raining.gif"
 
-setInterval(switchDayOrNight, 500);
-function switchDayOrNight() {
-  this.itsDayTime = !this.itsDayTime;
-}
-
 export default {
   name: 'the-view',
   data(){
@@ -36,13 +31,12 @@ export default {
       cloudImage: cloudFile,
       rainImage: rainFile,
       itsRaining: false,
-      now: new Date,
+      counter: 1,
       itsDayTime: true,
     }
   },
   created () {
-  setInterval(() => this.now = new Date, 500)
-}
-
+    setInterval(() => this.counter += 1, 1000);
+  }
 }
 </script>
