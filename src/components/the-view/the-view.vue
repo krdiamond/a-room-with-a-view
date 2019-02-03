@@ -5,7 +5,7 @@
 
     <img id="rain" :src="rainImage" v-if="itsRaining"/>
 
-    <div id="clouds">
+    <div id="clouds" v-on:click="closeWindow">
          <img id="cloud1" :src="cloudImage" v-on:click="itsRaining = !itsRaining"/>
          <img id="cloud2" :src="cloudImage" v-on:click="itsRaining = !itsRaining"/>
          <img id="cloud3" :src="cloudImage" v-on:click="itsRaining = !itsRaining"/>
@@ -30,10 +30,10 @@ export default {
       itsRaining: false,
     }
   },
-  // methods: {
-  //   closeWindow: function () {
-  //     serverBus.$emit('closeWindow', this.itsRaining);
-  //    }
-  // }
+  methods: {
+    closeWindow: function () {
+      serverBus.$emit('closeWindow', this.itsRaining);
+     }
+  }
 }
 </script>

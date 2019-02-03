@@ -1,26 +1,18 @@
 <template>
-  <div id="windows">
+  <div id="window" v-bind:class="{click_through: windowIsOpened}">
 
-    <div id="window" v-bind:class="{click_through: windowIsOpened}">
+    <img id="closed-window"
+          v-on:click="windowIsOpened = !windowIsOpened"
+          v-bind:class="{ hide: windowIsOpened}"
+          img :src="closedWindowImage">
 
-        <img id="closed-window"
-              v-on:click="windowIsOpened = !windowIsOpened"
-              v-bind:class="{ hide: windowIsOpened}"
-              img :src="closedWindowImage">
-
-        <img id="open-window"
-             v-on:click="windowIsOpened = !windowIsOpened"
-             v-bind:class="{ hide: !windowIsOpened}"
-             img :src="openWindowImage"/>
-    </div>
-
-
-     <div id="left-open-window" v-on:click="windowIsOpened = !windowIsOpened" ></div>
-     <div id="right-open-window" v-on:click="windowIsOpened = !windowIsOpened"></div>
+    <img id="open-window"
+         v-on:click="windowIsOpened = !windowIsOpened"
+         v-bind:class="{ hide: !windowIsOpened}"
+         img :src="openWindowImage"/>
 
 
   </div>
-
 </template>
 
 
@@ -42,13 +34,13 @@ export default {
       windowIsOpened: false,
     }
   },
-  // created() {
-  //   serverBus.$on('closeWindow', (itsRaining) => {
-  //     if (itsRaining == true && this.windowIsOpened == true) {
-  //       setTimeout(() => this.windowIsOpened = false, 1000);
-  //     }
-  //   });
-  // }
+  created() {
+    serverBus.$on('closeWindow', (itsRaining) => {
+      if (itsRaining == true && this.windowIsOpened == true) {
+        setTimeout(() => this.windowIsOpened = false, 1000);
+      }
+    });
+  }
 }
 </script>
 
