@@ -45,25 +45,43 @@ img {
   z-index: 2;
 }
 
-#window-controller {
+#left-open-window {
+  width: 23%;
+  height: 100%;
   position: absolute;
   top: 0;
-  height: 100%;
-  width: 100%;
-  .right {
-    border: 3px solid green;
-    width:23%;
-    position: absolute;
-    right: 0;
-    top: 0;
-    height:100%
-  }
-  .left {
-    border: 3px solid green;
-    width:23%;
-    height:100%;
-  }
+  z-index: 2;
 }
+
+#right-open-window {
+  width: 23%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 2;
+}
+
+
+// #window-controller {
+//   position: absolute;
+//   top: 0;
+//   height: 100%;
+//   width: 100%;
+//   .right {
+//     border: 3px solid green;
+//     width:23%;
+//     position: absolute;
+//     right: 0;
+//     top: 0;
+//     height:100%
+//   }
+//   .left {
+//     border: 3px solid green;
+//     width:23%;
+//     height:100%;
+//   }
+// }
 
 
 

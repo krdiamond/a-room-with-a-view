@@ -1,9 +1,9 @@
 <template>
   <div id="app" >
-    <div id="the-vue-container" :style="{ fontSize: postFontSize + 'em' }">
+    <div id="the-vue-container" >
 
       <Window/>
-      <theView v-on:enlarge-text="postFontSize += 0.1"/>
+      <theView/>
 
 
     </div>
@@ -23,7 +23,7 @@
     },
     data(){
       return {
-        postFontSize: 1,
+        itsRaining: false,
       }
     }
   }

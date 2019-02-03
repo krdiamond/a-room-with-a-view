@@ -5,17 +5,11 @@
 
     <img id="rain" :src="rainImage" v-if="itsRaining"/>
 
-    <div id="clouds" v-on:click="itsRaining = !itsRaining">
-         <img id="cloud1" :src="cloudImage"/>
-         <img id="cloud2" :src="cloudImage"/>
-         <img id="cloud3" :src="cloudImage"/>
+    <div id="clouds">
+         <img id="cloud1" :src="cloudImage" v-on:click="itsRaining = !itsRaining"/>
+         <img id="cloud2" :src="cloudImage" v-on:click="itsRaining = !itsRaining"/>
+         <img id="cloud3" :src="cloudImage" v-on:click="itsRaining = !itsRaining"/>
     </div>
-
-      DUMB SENTANCE
-
-    <button v-on:click="$emit('enlarge-text')">
-      Enlarge text
-    </button>
 
   </div>
 </template>
@@ -24,6 +18,7 @@
 import poolFile from "./images/pool.jpg"
 import cloudFile from "./images/cloud.png"
 import rainFile from "./images/raining.gif"
+import { serverBus } from '/Users/kristina/Programming/a-room-with-a-vue/src/main.js';
 
 export default {
   name: 'the-view',
@@ -34,6 +29,11 @@ export default {
       rainImage: rainFile,
       itsRaining: false,
     }
-  }
+  },
+  // methods: {
+  //   closeWindow: function () {
+  //     serverBus.$emit('closeWindow', this.itsRaining);
+  //    }
+  // }
 }
 </script>
