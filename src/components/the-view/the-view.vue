@@ -14,8 +14,6 @@
          <img id="cloud3" :src="cloudImage" v-on:click="itsRaining = !itsRaining"/>
     </div>
 
-    {{counter}}
-
   </div>
 </template>
 
@@ -45,8 +43,8 @@ export default {
       }
     }
   },
-  created () {
-    setInterval(() => this.counter += 1, 2000);
-  }
+  // created () {
+  //   setInterval(() => this.counter += 1, 2000);
+  // }
 }
 </script>
