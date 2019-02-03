@@ -35,8 +35,27 @@ export default {
       itsDayTime: true,
     }
   },
+  // watch: {
+  //   counter: function () {
+  //     this.answer = 'Waiting for you to stop typing...'
+  //     this.debouncedGetAnswer()
+  //   }
+  // },
+  computed: {
+    watchCounter: function () {
+      if (this.counter % 10 == 0 ) {
+        this.itsDayTime = !this.itsDayTime;
+      }
+    }
+  },
   created () {
-    setInterval(() => this.counter += 1, 1000);
+    setInterval(() => this.counter += 1, 500);
   }
 }
 </script>
+
+<!-- dayOrNight(() => {
+  if (counter % 10 == 0 ) {
+    this.itsDayTime = !this.itsDayTime;
+  }
+}); -->
