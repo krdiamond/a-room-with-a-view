@@ -18,7 +18,7 @@
      <div id="left-open-window" v-on:click="windowIsOpened = !windowIsOpened" ></div>
      <div id="right-open-window" v-on:click="windowIsOpened = !windowIsOpened"></div>
 
-
+    <Shelf/>
   </div>
 
 </template>
@@ -28,12 +28,16 @@
 
 import closedWindowFile from "./images/window-closed.png"
 import openWindowFile from "./images/window-open.png"
+import Shelf from '../shelf/shelf.vue'
 
 
 
 
 export default {
   name: 'window',
+  components: {   //component must be called here in addition to import
+    Shelf,
+  },
   data(){
     return {
       openWindowImage: openWindowFile,
