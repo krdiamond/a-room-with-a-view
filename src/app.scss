@@ -50,7 +50,6 @@ img {
   position: absolute;
   top: 0;
   z-index: 2;
-  border: 3px solid green;
 }
 
 #right-open-window {
@@ -60,7 +59,6 @@ img {
   top: 0;
   right: 0;
   z-index: 2;
-  border: 3px solid green;
 }
 
 // -------------------------------- THE VIEW -------------------------------- //
@@ -71,10 +69,10 @@ img {
 
 // --------------------------------- CLOUDS --------------------------------- //
 
-// @keyframes windy-clouds {
-//   from {left: 0;}
-//   to {left: -60%;}
-// }
+@keyframes windy-clouds {
+  from {left: 0;}
+  to {left: -60%;}
+}
 
 #clouds {
   position: absolute;
