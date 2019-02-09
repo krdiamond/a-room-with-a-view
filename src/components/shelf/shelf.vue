@@ -3,7 +3,7 @@
   <div id="shelf-area">
 
 
-    <img id="shelf" :src="shelfImage"/>
+    <img id="shelf" class="drop-zone" :src="shelfImage"/>
 
     <img id="watering-can" class="draggable" :src="wateringCanImage"/>
 
@@ -26,8 +26,6 @@ export default {
   },
   mounted() {
     var shelf = document.getElementById('shelf');
-
-
     interact('.draggable')
     .draggable({
       onmove: this.dragMoveListener,
@@ -37,27 +35,36 @@ export default {
         elementRect: { top: .90, left: 0, bottom: 1.1, right: 1 },
         endOnly: true
       },
-
     });
-
+    interact('.drop-zone')
+    .dropzone({
+      overlap: 0,
+      ondrop: this.onDropListener,
+    })
   },
   methods: {
     dragMoveListener (event) {
       var target = event.target,
           x = (parseFloat(target.getAttribute('data-x')) || 0) + event.dx,
           y = (parseFloat(target.getAttribute('data-y')) || 0) + event.dy;
-      // translate the element
+      // translate the element's CSS/Styling (tilts watering can)
       target.style.webkitTransform = 'translate(' + x + 'px, ' + y + 'px)';
-      target.style.transform = 'translate(' + x + 'px, ' + y + 'px)';
+      target.style.transform = 'translate(' + x + 'px, ' + y + 'px) rotate('+ '-60' + 'deg)';
       // update the posiion attributes
       target.setAttribute('data-x', x);
       target.setAttribute('data-y', y);
+    },
+    onDropListener (event) {
+      var target = event.relatedTarget,
+          x = (parseFloat(target.getAttribute('data-x')) || 0),
+          y = (parseFloat(target.getAttribute('data-y')) || 0);
+          //untilts watering can
+     target.style.transform = 'translate(' + x + 'px, ' + y + 'px) rotate('+ '0' + 'deg)';
+
     }
   }
 }
 </script>
-
-
 
 
 
