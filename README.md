@@ -13,10 +13,10 @@ If you do not use homebrew [follow these alternative instructions](https://yarnp
 
 <!-- ### Compiles and minifies for production ```yarn run build``` -->
 
-## Vue.js NOTES
-
-<!-- What does main.js do?  -->
-#### App.vue
-* <template> Holds all the main components of the app - the window and the pool <!-- should the pool actually be inside the window?  -->
-* <script> Imports the components from the file tree then then exports components to the <template>.
-* <style> connects the scss files
+## Interact.js
+### Implement interact.js into your Vue.js project
+* Install interact.js into your project ```$ npm install vue-interact --save ```
+* In the main app.vue component import interact.js ```import interact from 'interact.js';```
+* In the export section, inside the mounted area, include the code that gives the dragging function to a specific class
+* In the export section, inside the methods area, include any methods from the interact.js docs that you would like to use
+* The draggable (or whatever else) class will be available throughyour your project

@@ -21,11 +21,6 @@
     components: {   //component must be called here in addition to import
       Window,
       theView,
-    },
-    data(){
-      return {
-        itsRaining: false,
-      }
     }
   }
 </script>
